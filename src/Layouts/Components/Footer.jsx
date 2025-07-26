@@ -23,9 +23,9 @@ export default function Footer()
           ))}
 
         </div>
-        <div className="w-full h-full flex justify-center items-center text-center"> <h3 className='mb-5 text-3xl font-bold tracking-wider'><strong>STAND’<span className='text-cyan-800'>ART</span></strong> – Une expertise qui s’affirme</h3></div>
+        <div className="w-full h-full flex justify-center items-center text-center py-5"> <h3 className='mb-5 text-lg lg:text-3xl font-bold tracking-wider'><strong>STAND’<span className='text-cyan-800'>ART</span></strong> – Une expertise qui s’affirme</h3></div>
       </div>
-      <div className="w-full h-16 flex justify-center items-center text-lg lg:text-2xl font-bold">&copy; Stand'Art Corporation. All right reserved</div>
+      <div className="w-full h-16 flex justify-center items-center text-lg lg:text-2xl font-bold pt-5">&copy; Stand'Art Corporation. All right reserved</div>
     </div>
   )
 }

@@ -16,7 +16,7 @@ export default function Contact()
     <div className="w-full lg:h-screen h-[120vh] container flex justify-between mt-10 lg:flex-row flex-col" id="Contact">
       <div className="w-full h-full flex flex-col justify-between">
 
-        <div className="w-full h-full border-2 lg:ml-20 relative space-y-7 flex justify-center flex-col lg:rounded-ss-[5rem] py-5 lg:py-0">
+        <div className="w-full h-full border-2 lg:ml-20 relative space-y-7 flex justify-center flex-col lg:rounded-ss-[5rem] py-5">
 
           <h2 className="ml-5 lg:ml-20">Information</h2>
 
@@ -30,9 +30,22 @@ export default function Contact()
           </div>
           ))}
 
+          {/* Google maps sur phone */}
+          <div className="absolute w-[100px] h-[100px] top-10 right-0 lg:hidden flex ">
+            <iframe
+              title="Stand'art Location"
+              width="100%"
+              height="100%"
+              className=" w-full h-full lg:h-full shadow-[inset_0px_0px_5px_rgba(0,0,0,0.7)]"
+              style={{ border: 0 }}
+              loading="lazy"
+              allowFullScreen
+              src="https://www.google.com/maps?q=-18.853962,47.566114&z=15&output=embed"
+            ></iframe>
+          </div>
 
           {/* Google maps */}
-          <div className="absolute w-[222px] h-[227px] bottom-0 right-0 hidden lg:flex ">
+          <div className="absolute w-[222px] h-[241px] bottom-0 right-0 hidden lg:flex ">
             <iframe
               title="Stand'art Location"
               width="100%"
@@ -52,17 +65,17 @@ export default function Contact()
       <div className="w-full h-full flex flex-col justify-between">
         <div className="w-full h-full hidden lg:flex"></div>
 
-        <div className="w-full h-full border-2 lg:-mt-56 lg:-ml-36 lg:rounded-ee-[5rem] relative space-y-7 flex justify-center flex-col">
+        <div className="w-full h-full border-2 lg:-mt-56 lg:-ml-36 lg:rounded-ee-[5rem] relative flex justify-center flex-col">
 
 
-          <div className="flex flex-col lg:ml-24 lg:mr-24 mx-3 lg:mt-48 space-y-2">
+          <div className="flex flex-col lg:ml-24 lg:mr-24 mx-3 lg:mt-48 space-y-2 relative">
             <label htmlFor="Email" className="py-3 text-lg: font-bold ">Email:</label>
-            <input type="text" className=" p-3 border" />
+            <input type="text" className=" p-3 border focus:outline-1 focus:outline focus:outline-cyan-800" />
             <label htmlFor="Mess">Message</label>
-            <input type="text" className="p-3 border" />
+            <input type="text" className="p-3 border focus:outline-1 focus:outline focus:outline-cyan-800" />
             <input type="submit" className="p-3 bg-cyan-800 text-lg text-white font-bold" value='Envoyer' />
           </div>
-          <h2 className="absolute lg:top-20 top-5 left-5 lg:mr-24 right-0">Contactez-nous ici</h2>
+          <h2 className="absolute lg:top-20 top-12 right-1/4 lg:mr-24 lg:right-5">Contactez-nous ici</h2>
 
 
         </div>

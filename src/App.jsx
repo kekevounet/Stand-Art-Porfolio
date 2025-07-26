@@ -20,23 +20,23 @@ export default function App()
       <div className="w-full h-[70vh] bg-white p-2 bg-fixed inset-0 flex justify-between bg-contain bg-no-repeat bg-center items-center text-blue-500" style={{ backgroundImage : `url(${Logo})` }}></div>
       <Réalisation />
       <div className="w-full h-[40vh] lg:h-[70vh] bg-white p-2 bg-fixed overflow-hidden inset-0 flex lg:flex-row-reverse justify-center lg:justify-between bg-contain bg-no-repeat bg-center items-center text-blue-500 fond4">
-        <Parallax speed={-25} className="text-white text-4xl lg:text-8xl font-extrabold tracking-widest lg:mr-20">COMPETENCE</Parallax>
-        <Parallax speed={-25} className="text-white text-3xl lg:text-8xl font-extrabold tracking-widest ml-20"><FaBrain /></Parallax>
+        <Parallax speed={-25}  rotate={[-10 , 10]} className="text-white text-4xl lg:text-8xl font-extrabold tracking-widest lg:mr-20">COMPETENCE</Parallax>
+        <Parallax speed={-25} rotate={[10 , -10]} className="text-white text-3xl lg:text-8xl font-extrabold tracking-widest ml-20"><FaBrain /></Parallax>
       </div>
       <Compétences />
-      <div className="w-full h-[40vh] lg:h-[70vh] bg-white p-2 bg-fixed overflow-hidden inset-0 flex lg:flex-row-reverse justify-center lg:justify-between bg-contain bg-no-repeat bg-center items-center text-blue-500 fond1">
-        <Parallax speed={-25} className="text-white text-4xl lg:text-8xl font-extrabold tracking-widest lg:ml-20">EXPERIENCE</Parallax>
-        <Parallax speed={-25} className="text-white text-3xl lg:text-8xl font-extrabold tracking-widest ml-20 lg:mr-20"><AiFillCheckCircle /></Parallax>
+      <div className="w-full h-[40vh] lg:h-[70vh] bg-white p-2 bg-fixed overflow-hidden inset-0 flex lg:flex-row justify-center lg:justify-between bg-contain bg-no-repeat bg-center items-center text-blue-500 fond1">
+        <Parallax speed={-25} rotate={[10 , -10]} className="text-white text-4xl lg:text-8xl font-extrabold tracking-widest lg:ml-20">EXPERIENCE</Parallax>
+        <Parallax speed={-25} rotate={[10 , -10]} className="text-white text-3xl lg:text-8xl font-extrabold tracking-widest ml-20 lg:mr-20 lg:ml-0"><AiFillCheckCircle /></Parallax>
       </div>
       <Expérience />
       <div className="w-full h-[40vh] lg:h-[70vh] bg-white p-2 bg-fixed overflow-hidden inset-0 flex lg:flex-row-reverse justify-center lg:justify-between bg-contain bg-no-repeat bg-center items-center text-blue-500 fond2">
-        <Parallax speed={-25} className="text-white text-4xl lg:text-8xl font-extrabold tracking-widest lg:mr-20">PERSONNEL</Parallax>
-        <Parallax speed={-25} className="text-white text-3xl lg:text-8xl font-extrabold tracking-widest ml-20"><AiFillCheckCircle /></Parallax>
+        <Parallax speed={-25} rotate={[10 , -10]} className="text-white text-4xl lg:text-8xl font-extrabold tracking-widest lg:mr-20">PERSONNEL</Parallax>
+        <Parallax speed={-25} rotate={[10 , -10]} className="text-white text-3xl lg:text-8xl font-extrabold tracking-widest ml-20"><AiFillCheckCircle /></Parallax>
       </div>
       <Personnel />
-      <div className="w-full h-[40vh] lg:h-[70vh] bg-white p-2 bg-fixed overflow-hidden inset-0 flex lg:flex-row-reverse justify-center lg:justify-between bg-contain bg-no-repeat bg-center items-center text-blue-500 fond3">
-        <Parallax speed={-25} className="text-white text-4xl lg:text-8xl font-extrabold tracking-widest lg:ml-20">Contact</Parallax>
-        <Parallax speed={-25} className="text-white text-3xl lg:text-8xl font-extrabold tracking-widest ml-20 lg:mr-20"><MdContacts /></Parallax>
+      <div className="w-full h-[40vh] lg:h-[70vh] bg-white p-2 bg-fixed overflow-hidden inset-0 flex lg:flex-row justify-center lg:justify-between bg-contain bg-no-repeat bg-center items-center text-blue-500 fond3">
+        <Parallax speed={-25} rotate={[10 , -10]} className="text-white text-4xl lg:text-8xl font-extrabold tracking-widest lg:ml-20">Contact</Parallax>
+        <Parallax speed={-25} rotate={[10 , -10]} className="text-white text-3xl lg:text-8xl font-extrabold tracking-widest ml-20 lg:mr-20 lg:ml-0"><MdContacts /></Parallax>
       </div>
       <Contact />
       <div className="w-full h-20 bg-white" />
