@@ -2,6 +2,7 @@ import { CgTimelapse } from "react-icons/cg";
 import { HiMail } from "react-icons/hi";
 import { AiFillPhone } from "react-icons/ai";
 import { FaMapMarkerAlt } from "react-icons/fa";
+import { useState } from "react";
 export default function Contact()
 {
   // Etat
@@ -10,7 +11,35 @@ export default function Contact()
     { titre : 'Téléphones', icon:<AiFillPhone />, nom: '+261 34 31 093 79 / +261 38 66 414 82' },
     { titre : 'Email', icon:<HiMail />, nom: 'manager.standart0306@gmail.com' },
     { titre : 'Horaires', icon:<CgTimelapse />, nom: 'Lun - Sam : 7h30 à 16h30' },
-  ]
+  ];
+
+  // Comportement
+  const [result, setResult] = useState("");
+
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    setResult("Sending....");
+    const formData = new FormData(event.target);
+
+    formData.append("access_key", "5a5726b2-436b-b4bc-51697b576221");
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData
+    });
+
+    const data = await response.json();
+
+    if (data.success) {
+      setResult("Form Submitted Successfully");
+      event.target.reset();
+    } else {
+      console.log("Error", data);
+      setResult(data.message);
+    }
+  };
+
+
   // Affichage
   return(
     <div className="w-full lg:h-screen h-[120vh] container flex justify-between mt-10 lg:flex-row flex-col" id="Contact">
@@ -68,13 +97,13 @@ export default function Contact()
         <div className="w-full h-full border-2 lg:-mt-56 lg:-ml-36 lg:rounded-ee-[5rem] relative flex justify-center flex-col">
 
 
-          <div className="flex flex-col lg:ml-24 lg:mr-24 mx-3 lg:mt-48 space-y-2 relative">
-            <label htmlFor="Email" className="py-3 text-lg: font-bold ">Email:</label>
-            <input type="text" className=" p-3 border focus:outline-1 focus:outline focus:outline-cyan-800" />
+          <form className="flex flex-col lg:ml-24 lg:mr-24 mx-3 lg:mt-48 space-y-2 relative" onSubmit={onSubmit}>
+            <label htmlFor="Email" className="py-3 text-lg: font-bold">Email:</label>
+            <input type="text" className=" p-3 border focus:outline-1 focus:outline focus:outline-cyan-800"  name="email"/>
             <label htmlFor="Mess">Message</label>
-            <input type="text" className="p-3 border focus:outline-1 focus:outline focus:outline-cyan-800" />
+            <input type="text" className="p-3 border focus:outline-1 focus:outline focus:outline-cyan-800" name="message"/>
             <input type="submit" className="p-3 bg-cyan-800 text-lg text-white font-bold" value='Envoyer' />
-          </div>
+          </form>
           <h2 className="absolute lg:top-20 top-12 right-1/4 lg:mr-24 lg:right-5">Contactez-nous ici</h2>
 
 
