@@ -105,6 +105,7 @@ export default function Contact()
             <input type="submit" className="p-3 bg-cyan-800 text-lg text-white font-bold" value='Envoyer' />
           </form>
           <h2 className="absolute lg:top-20 top-12 right-1/4 lg:mr-24 lg:right-5">Contactez-nous ici</h2>
+          <p className="text-sm text-cyan-700 mt-2">{result}</p>
 
 
         </div>
