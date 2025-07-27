@@ -1,24 +1,47 @@
-import { IoIosBusiness } from "react-icons/io";
-import { MdAddBusiness } from "react-icons/md";
-import { MdBusinessCenter } from "react-icons/md";
-import { IoMdBusiness } from "react-icons/io";
-import { FaBusinessTime } from "react-icons/fa";
-import { Fa500Px } from "react-icons/fa";
+import { FaUserMd, FaGift, FaTshirt, FaPrint, FaUniversity, FaProjectDiagram } from 'react-icons/fa';
+
 export default function Expérience() {
   // Etat
-  const items = [
-    { titre: 'lorem', texte: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, ipsam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, ipsam.', icon: <FaBusinessTime /> },
-    { titre: 'lorem', texte: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, ipsam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, ipsam.', icon: <IoMdBusiness /> },
-    { titre: 'lorem', texte: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, ipsam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, ipsam.', icon: <MdBusinessCenter /> },
-    { titre: 'lorem', texte: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, ipsam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, ipsam.', icon: <MdAddBusiness /> },
-    { titre: 'lorem', texte: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, ipsam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, ipsam.', icon: <IoIosBusiness /> },
-    { titre: 'lorem', texte: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, ipsam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, ipsam.', icon: <Fa500Px /> },
-  ];
+ const items = [
+   {
+     titre: 'Vêtements professionnels',
+     texte: 'Confection de vêtements professionnels : blouses médicales, gilets de sécurité, polos personnalisés pour établissements scolaires.',
+     icon: <FaUserMd />
+   },
+   {
+     titre: 'Goodies personnalisés',
+     texte: 'Création de goodies & objets publicitaires : tote bags, porte-clés, casquettes et autres articles sur mesure pour campagnes de sensibilisation ou événements.',
+     icon: <FaGift />
+   },
+   {
+     titre: 'Habillage visuel',
+     texte: 'Habillage visuel : réalisation de vêtements d’équipe (maillots de sport, uniformes), avec logos brodés ou imprimés.',
+     icon: <FaTshirt />
+   },
+   {
+     titre: 'Supports imprimés',
+     texte: 'Supports de communication : impression d’affiches, bâches et flyers pour entreprises ou ONG.',
+     icon: <FaPrint />
+   },
+   {
+     titre: 'Partenariats institutionnels',
+     texte: 'Collaboration avec des particuliers et institutions : lycées, associations, sociétés privées ou organismes locaux.',
+     icon: <FaUniversity />
+   },
+   {
+     titre: 'Gestion de projet complète',
+     texte: 'Suivi complet du projet : de la conception graphique jusqu’à la livraison finale, en garantissant qualité, réactivité et respect des délais.',
+     icon: <FaProjectDiagram />
+   }
+ ];
   // Affichage
   return (
     <div className="w-full h-full mb-10 bg-white container" id="Expérience">
-      <h1 className="text-center">lorem</h1>
-      <h4 className="text-center mb-10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, aliquid?</h4>
+      <div className="text-center max-w-3xl mx-auto mb-10">
+  <p className="text-lg text-gray-700">
+    Nous proposons une gamme complète de services autour de la personnalisation textile et de la communication visuelle. Grâce à notre savoir-faire, nous accompagnons entreprises, institutions et particuliers dans la réalisation de leurs projets sur mesure, avec une attention particulière à la qualité, à la réactivité et au respect des délais.
+  </p>
+</div>
       <div className="w-full h-1/2 mb-10 gap-5 grid lg:grid-cols-2 grid-cols-1">
         {items.map((item, index) => (
           <div

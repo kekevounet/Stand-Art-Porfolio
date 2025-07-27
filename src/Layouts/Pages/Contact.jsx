@@ -1,8 +1,10 @@
+import { CgSpinnerTwo } from "react-icons/cg";
 import { CgTimelapse } from "react-icons/cg";
 import { HiMail } from "react-icons/hi";
 import { AiFillPhone } from "react-icons/ai";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import { useState } from "react";
+import Swal from 'sweetalert2';
 export default function Contact()
 {
   // Etat
@@ -18,7 +20,11 @@ export default function Contact()
 
   const onSubmit = async (event) => {
     event.preventDefault();
-    setResult("Sending....");
+    setResult(()=>{
+      return(
+        <div className="flex items-center ml-4">Envoi du message <CgSpinnerTwo className="animate-spin ml-3"/></div>
+      )
+    });
     const formData = new FormData(event.target);
 
     formData.append("access_key", "5a5726b2-d782-436b-b4bc-51697b576221");
@@ -31,11 +37,18 @@ export default function Contact()
     const data = await response.json();
 
     if (data.success) {
-      setResult("Form Submitted Successfully");
+      Swal.fire({
+          title: "Message envoyé avec succès",
+          text: "Stand'Art vous remercie pour votre soutien.",
+          icon: "success"
+        });
       event.target.reset();
     } else {
-      console.log("Error", data);
-      setResult(data.message);
+      Swal.fire({
+        title: "Oups, une erreur a été détecté !",
+        text: "Nous sommes navrés de vous dire de recommencer plus tard, merci.",
+        icon: "error"
+      });
     }
   };
 
@@ -97,11 +110,11 @@ export default function Contact()
         <div className="w-full h-full border-2 lg:-mt-56 lg:-ml-36 lg:rounded-ee-[5rem] relative flex justify-center flex-col">
 
 
-          <form className="flex flex-col lg:ml-24 lg:mr-24 mx-3 lg:mt-48 space-y-2 relative" onSubmit={onSubmit}>
+          <form className="flex flex-col lg:ml-24 lg:mr-24 mx-3 lg:mt-56 space-y-2 relative" onSubmit={onSubmit}>
             <label htmlFor="Email" className="py-3 text-lg: font-bold">Email:</label>
-            <input type="text" className=" p-3 border focus:outline-1 focus:outline focus:outline-cyan-800"  name="email"/>
+            <input type="email" className=" p-3 border focus:outline-1 focus:outline focus:outline-cyan-800"  name="email" require/>
             <label htmlFor="Mess">Message</label>
-            <input type="text" className="p-3 border focus:outline-1 focus:outline focus:outline-cyan-800" name="message"/>
+            <input type="text" className="p-3 border focus:outline-1 focus:outline focus:outline-cyan-800" name="message" require/>
             <input type="submit" className="p-3 bg-cyan-800 text-lg text-white font-bold" value='Envoyer' />
           </form>
           <h2 className="absolute lg:top-20 top-12 right-1/4 lg:mr-24 lg:right-5">Contactez-nous ici</h2>

@@ -1,4 +1,3 @@
-import { FaUsers } from "react-icons/fa";
 import { MdContacts } from "react-icons/md";
 import { TbChartAreaLineFilled } from "react-icons/tb";
 import { BsXCircle } from "react-icons/bs";
@@ -15,7 +14,6 @@ export default function NavBar()
     {nom: 'Réalisation', icon: <TbChartAreaLineFilled />, lien: 'Réalisation'},
     {nom: 'Compétences', icon: <FaBrain />, lien: 'Compétences' },
     {nom: 'Expérience', icon: <AiFillCheckCircle />, lien: 'Expérience'},
-    {nom: 'Personnel', icon:<FaUsers /> , lien: 'Personnel'},
     {nom: 'Contact', icon: <MdContacts />, lien: 'Contact'},
   ];
   const [ navOuvert, setNavOuvert ] = useState(true);
@@ -47,7 +45,7 @@ export default function NavBar()
     {/* PUB fixe */}
     <div className="w-full h-10 bg-cyan-900 fixed top-0 z-50 flex text-white justify-between items-center shadow-[0px_0px_5px_white]">
       <div className="ml-5 lg:text-lg font-bold text-sm">Stand'Art</div>
-      <div className="mr-5 lg:text-lg font-bold text-sm">manager.standart0306@gmail.com</div>
+      <a className="mr-5 lg:text-lg font-bold text-sm text-white no-underline animate-bounce" href="mailto:manager.standart0306@gmail.com" target="_blank" rel="nopenner noreferrer">manager.standart0306@gmail.com</a>
     </div>
     {/* NavBar */}
       <div className={`w-full items-center border-t overflow-hidden bg-cyan-800 lg:mt-10 mt-[40px] z-40 flex justify-center shadow-[0px_5px_5px_0px_rgba(21,94,117,0.75)] transition-all duration-500 ${navOuvert ? 'h-[70vh] lg:h-20' : 'h-20'}`}>
