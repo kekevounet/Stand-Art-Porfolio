@@ -36,7 +36,7 @@ export default function Expérience() {
  ];
   // Affichage
   return (
-    <div className="w-full h-full mb-10 bg-white container" id="Expérience">
+    <div className="w-full h-[170vh] lg:h-[100vh] flex items-center justify-center flex-col mb-10 bg-white container py-16" id="Expérience">
       <div className="text-center max-w-3xl mx-auto mb-10">
   <p className="text-lg text-gray-700">
     Nous proposons une gamme complète de services autour de la personnalisation textile et de la communication visuelle. Grâce à notre savoir-faire, nous accompagnons entreprises, institutions et particuliers dans la réalisation de leurs projets sur mesure, avec une attention particulière à la qualité, à la réactivité et au respect des délais.

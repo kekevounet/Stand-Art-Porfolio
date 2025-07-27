@@ -51,7 +51,7 @@ export default function Competences() {
   ];
 
   return (
-    <div className="w-full h-[100vh] flex items-center justify-center flex-col mb-10 bg-white container py-16" id="Competences">
+    <div className="w-full h-[170vh] lg:h-[100vh] flex items-center justify-center flex-col mb-10 bg-white container py-16" id="Competences">
       <h4 className="text-center mb-10 text-gray-600">
         Nous combinons créativité, expertise technique et sens du service pour répondre efficacement aux besoins de nos clients.
       </h4>
