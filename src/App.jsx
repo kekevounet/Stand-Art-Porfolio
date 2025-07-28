@@ -117,7 +117,7 @@ export default function App() {
       {isVisible && (
         <div
           onClick={scrollToTop}
-          className="fixed bottom-5 right-5 z-40 w-[4%] h-[8vh] fond3 flex items-center justify-center border rounded-full cursor-pointer transition-opacity duration-500"
+          className="fixed bottom-5 right-5 z-40 lg:w-[4%] lg:h-[8vh] w-[15%] h-[7vh] fond3 flex items-center justify-center border rounded-full cursor-pointer transition-opacity duration-500"
         >
           <AiOutlineArrowUp className="text-5xl text-white" />
         </div>
