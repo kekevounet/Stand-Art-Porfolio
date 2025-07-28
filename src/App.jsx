@@ -1,3 +1,4 @@
+import { AiOutlineArrowUp } from "react-icons/ai";
 import { MdContacts } from "react-icons/md";
 import { AiFillCheckCircle } from "react-icons/ai";
 import { FaBrain } from "react-icons/fa";
@@ -77,6 +78,11 @@ export default function App()
       <Contact />
       <div className="w-full h-20 bg-white" />
       <Footer />
+
+      <div className="fixed bottom-5 right-5 z-40 w-[4%] h-[8vh] fond3 flex items-center justify-center border rounded-full">
+        <AiOutlineArrowUp className="text-5xl text-white"/>
+      </div>
+
     </div>
   )
 }

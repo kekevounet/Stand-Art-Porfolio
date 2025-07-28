@@ -111,7 +111,15 @@ export default function Réalisation() {
   return (
     <div className="flex flex-col items-center w-full py-10" id="Réalisation">
       <div className="container text-center">
-        <h2 className="text-3xl font-bold">Matériels informatiques</h2>
+        <div className="max-w-3xl mx-auto text-center px-4">
+        <h5 className="text-3xl font-extrabold text-gray-900 mb-4 tracking-wide">
+          Nos réalisations qui font notre fierté
+        </h5>
+        <p className="text-gray-700 text-lg leading-relaxed">
+          Depuis notre création, nous avons mis tout notre savoir-faire au service de projets uniques et ambitieux. Chaque réalisation témoigne de notre engagement envers la qualité, l’innovation et la satisfaction client. Que ce soit dans la conception, la fabrication ou la livraison, nous nous efforçons d’atteindre l’excellence à chaque étape, afin de transformer vos idées en succès tangibles. Découvrez ci-dessous une sélection représentative de nos travaux les plus marquants, fruits d’une passion partagée et d’un professionnalisme reconnu.
+        </p>
+      </div>
+
         <hr className="my-4 border-cyan-800" />
       </div>
       <div className="flex flex-col w-full space-y-20">
@@ -123,7 +131,7 @@ export default function Réalisation() {
             } items-center justify-center gap-10 lg:gap-20 w-full p-4 lg:p-5`}
           >
             <div className="flex items-center justify-center w-full lg:w-1/2">
-              <div className="w-full max-w-xl h-[400px] sm:h-[500px] md:h-[600px] overflow-hidden border-8 rounded-3xl border-cyan-800">
+              <div className="w-full max-w-xl h-[400px] sm:h-[500px] md:h-[600px] overflow-hidden rounded-3xl ">
                 <img
                   src={service.img}
                   alt={service.titre}
