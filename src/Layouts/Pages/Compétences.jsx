@@ -62,7 +62,7 @@ export default function Competences() {
   ];
 
   return (
-    <div className="w-full h-[200vh] lg:h-[100vh] my-10 bg-white container" id="Expérience">
+    <div className="w-full h-[200vh] lg:h-[100vh] my-10 bg-white container" id="Compétences">
       <div className="text-center max-w-3xl mx-auto mb-10">
         <p className="text-lg text-gray-700">
           Nous combinons créativité, expertise technique et sens du service pour répondre efficacement aux besoins de nos clients.

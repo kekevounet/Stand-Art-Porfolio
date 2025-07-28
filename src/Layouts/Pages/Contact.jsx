@@ -25,6 +25,9 @@ export default function Contact()
         <div className="flex items-center ml-4">Envoi du message <CgSpinnerTwo className="animate-spin ml-3"/></div>
       )
     });
+    setTimeout(() => {
+      setResult(null);
+  }, 7000);
     const formData = new FormData(event.target);
 
     formData.append("access_key", "5a5726b2-d782-436b-b4bc-51697b576221");

@@ -6,6 +6,7 @@ import { AiFillCheckCircle } from "react-icons/ai";
 import { FaBrain } from "react-icons/fa";
 import { AiFillHome } from "react-icons/ai";
 import { useEffect, useState } from "react";
+import { motion } from 'framer-motion';
 export default function NavBar()
 {
   // Etat
@@ -43,12 +44,22 @@ export default function NavBar()
     <div className="lg:hidden absolute right-5 top-14 text-white text-5xl"  onClick={() => setNavOuvert(!navOuvert)}>{navOuvert ? (<BsXCircle />) : (<CgMenuGridO />)}</div>
 
     {/* PUB fixe */}
-    <div className="w-full h-10 bg-cyan-900 fixed top-0 z-50 flex text-white justify-between items-center shadow-[0px_0px_5px_white]">
+    <motion.div
+      className="w-full h-10 bg-cyan-900 fixed top-0 z-50 flex text-white justify-between items-center shadow-[0px_0px_5px_white]"
+      initial = {{ translateY : '-150%', opacity:0}}
+      animate = {{ translateY : 0, opacity:1}}
+      transition = {{ duration: 1, delay:1}}
+    >
       <div className="ml-5 lg:text-lg font-bold text-sm">Stand'Art</div>
       <a className="mr-5 lg:text-lg font-bold text-sm text-white no-underline animate-bounce" href="mailto:manager.standart0306@gmail.com" target="_blank" rel="nopenner noreferrer">manager.standart0306@gmail.com</a>
-    </div>
+    </motion.div>
     {/* NavBar */}
-      <div className={`w-full items-center border-t overflow-hidden bg-cyan-800 lg:mt-10 mt-[40px] z-40 flex justify-center shadow-[0px_5px_5px_0px_rgba(21,94,117,0.75)] transition-all duration-500 ${navOuvert ? 'h-[70vh] lg:h-20' : 'h-20'}`}>
+      <motion.div
+        className={`w-full items-center border-t overflow-hidden bg-cyan-800 lg:mt-10 mt-[40px] z-40 flex justify-center shadow-[0px_5px_5px_0px_rgba(21,94,117,0.75)] transition-all duration-500 ${navOuvert ? 'h-[70vh] lg:h-20' : 'h-20'}`}
+        initial = {{ translateY : '-150%' , opacity : 0}}
+        animate = {{ translateY : 0, opacity:1}}
+        transition = {{ duration: 1}}
+      >
         {/* Texte standArt sur gauche */}
         <div className="absolute left-5 top-14 text-4xl text-white">
           <span><strong className="font-bold">Stand</strong>'Art</span>
@@ -67,7 +78,7 @@ export default function NavBar()
             </a>
           ))}
         </nav>}
-      </div>
+      </motion.div>
     </div>
   )
 }

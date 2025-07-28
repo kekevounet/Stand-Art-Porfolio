@@ -10,8 +10,22 @@ import Expérience from "./Layouts/Pages/Expériences";
 import Contact from "./Layouts/Pages/Contact";
 import Footer from "./Layouts/Components/Footer";
 import { Parallax } from 'react-scroll-parallax';
+import carte from './Layouts/Assets/Carte nadia.png';
+import { useState } from 'react'
+
 export default function App()
 {
+  // Etat
+  const [showDialog, setShowDialog] = useState(false);
+
+  const handleDownload = () => {
+    const link = document.createElement("a");
+    link.href = carte;
+    link.download = "Carte_de_visite.png";
+    link.click();
+    setShowDialog(false);
+  };
+  // Affichage
   return(
     <div className="">
       <NavBar />
@@ -28,10 +42,37 @@ export default function App()
         <Parallax speed={-25} rotate={[10 , -10]} className="text-white text-3xl lg:text-8xl font-extrabold tracking-widest ml-20 lg:mr-20 lg:ml-0"><AiFillCheckCircle /></Parallax>
       </div>
       <Expérience />
-
       <div className="w-full h-[40vh] lg:h-[70vh] bg-white p-2 bg-fixed overflow-hidden inset-0 flex lg:flex-row justify-center lg:justify-between bg-contain bg-no-repeat bg-center items-center text-blue-500 fond3">
         <Parallax speed={-25} rotate={[10 , -10]} className="text-white text-4xl lg:text-8xl font-extrabold tracking-widest lg:ml-20">Contact</Parallax>
         <Parallax speed={-25} rotate={[10 , -10]} className="text-white text-3xl lg:text-8xl font-extrabold tracking-widest ml-20 lg:mr-20 lg:ml-0"><MdContacts /></Parallax>
+      </div>
+      <div className="container w-full h-[20vh] lg:h-[25vh] my-20 relative justify-center items-center flex">
+        <img src={carte} alt="Carte de visite" className='absolute w-[95%] lg:w-[50%] h-full border-2 border-cyan-800' onClick={() => setShowDialog(true)} />
+
+        {/* Donwload */}
+         {showDialog && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center fond3 bg-opacity-60">
+          <div className="w-full max-w-sm p-6 space-y-4 bg-white shadow-xl rounded-xl">
+            <h2 className="text-lg font-semibold text-gray-800">Stand'art | Carte de visite ?</h2>
+            <p className="text-sm text-gray-600">Contactez nous le plus rapidement .</p>
+            <div className="flex justify-end space-x-4">
+              <button
+                onClick={() => setShowDialog(false)}
+                className="px-4 py-2 text-sm bg-gray-200 rounded hover:bg-gray-300"
+              >
+                Annuler
+              </button>
+              <button
+                onClick={handleDownload}
+                className="px-4 py-2 text-sm text-white bg-blue-600 rounded hover:bg-blue-700"
+              >
+                Télécharger
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
       </div>
       <Contact />
       <div className="w-full h-20 bg-white" />

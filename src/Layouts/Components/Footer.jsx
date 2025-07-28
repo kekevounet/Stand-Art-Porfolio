@@ -6,7 +6,6 @@ export default function Footer()
       {nom: 'Réalisation', lien: 'Réalisation'},
       {nom: 'Compétences', lien: 'Compétences' },
       {nom: 'Expérience', lien: 'Expérience'},
-      {nom: 'Personnel', lien: 'Personnel'},
       {nom: 'Contact', lien: 'Contact'},
     ];
   // Affichage
