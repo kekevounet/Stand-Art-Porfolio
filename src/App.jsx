@@ -47,7 +47,7 @@ export default function App()
         <Parallax speed={-25} rotate={[10 , -10]} className="text-white text-3xl lg:text-8xl font-extrabold tracking-widest ml-20 lg:mr-20 lg:ml-0"><MdContacts /></Parallax>
       </div>
       <div className="container w-full h-[20vh] lg:h-[25vh] my-20 relative justify-center items-center flex">
-        <img src={carte} alt="Carte de visite" className='absolute w-[95%] lg:w-[50%] h-full border-2 border-cyan-800' onClick={() => setShowDialog(true)} />
+        <img src={carte} alt="Carte de visite" className='absolute w-[95%] lg:w-[50%] cursor-pointer h-full border-2 border-cyan-800' onClick={() => setShowDialog(true)} />
 
         {/* Donwload */}
          {showDialog && (
