@@ -90,7 +90,7 @@ export default function Contact()
           </div>
 
           {/* Google maps */}
-          <div className="absolute w-[222px] h-[241px] bottom-0 right-0 hidden lg:flex ">
+          <div className="absolute w-[222px] h-[241px] z-20 bottom-0 right-0 hidden lg:flex ">
             <iframe
               title="Stand'art Location"
               width="100%"
