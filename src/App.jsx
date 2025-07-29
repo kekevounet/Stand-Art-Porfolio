@@ -7,7 +7,7 @@ import NavBar from "./Layouts/Components/NavBar";
 import Réalisation from "./Layouts/Pages/Réalisation";
 import Compétences from "./Layouts/Pages/Compétences";
 import Logo from './Layouts/Assets/Logo.png';
-import Expérience from "./Layouts/Pages/Expériences";
+import Expérience from "./Layouts/Pages/Choix";
 import Contact from "./Layouts/Pages/Contact";
 import Footer from "./Layouts/Components/Footer";
 import { Parallax } from 'react-scroll-parallax';
@@ -17,6 +17,7 @@ import { useState, useEffect } from 'react';
 export default function App() {
   // État du dialogue de téléchargement
   const [showDialog, setShowDialog] = useState(false);
+
 
   const handleDownload = () => {
     const link = document.createElement("a");
@@ -65,7 +66,7 @@ export default function App() {
       <Compétences />
 
       <div className="w-full h-[40vh] lg:h-[70vh] bg-white p-2 bg-fixed overflow-hidden inset-0 flex lg:flex-row justify-center lg:justify-between bg-contain bg-no-repeat bg-center items-center text-blue-500 fond1">
-        <Parallax speed={-25} rotate={[10, -10]} className="text-white text-4xl lg:text-8xl font-extrabold tracking-widest lg:ml-20">EXPERIENCE</Parallax>
+        <Parallax speed={-25} rotate={[10, -10]} className="text-white text-4xl lg:text-5xl font-extrabold tracking-widest lg:ml-20">Pourquoi nous choisir?</Parallax>
         <Parallax speed={-25} rotate={[10, -10]} className="text-white text-3xl lg:text-8xl font-extrabold tracking-widest ml-20 lg:mr-20 lg:ml-0"><AiFillCheckCircle /></Parallax>
       </div>
 
@@ -110,7 +111,7 @@ export default function App() {
       </div>
 
       <Contact />
-      <div className="w-full h-20 bg-white" />
+
       <Footer />
 
       {/* Bouton Scroll to Top */}

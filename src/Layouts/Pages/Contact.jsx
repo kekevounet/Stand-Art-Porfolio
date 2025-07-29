@@ -5,6 +5,7 @@ import { AiFillPhone } from "react-icons/ai";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import { useState } from "react";
 import Swal from 'sweetalert2';
+import { Parallax } from "react-scroll-parallax";
 export default function Contact()
 {
   // Etat
@@ -58,76 +59,56 @@ export default function Contact()
 
   // Affichage
   return(
-    <div className="w-full lg:h-screen h-[120vh] container flex justify-between mt-10 lg:flex-row flex-col" id="Contact">
-      <div className="w-full h-full flex flex-col justify-between">
+    <div className='relative overflow-hidden'>
+      <div className="w-full lg:h-screen h-[120vh] container flex justify-between gap-5 items-center lg:flex-row flex-col" id="Contact">
 
-        <div className="w-full h-full border-2 lg:ml-20 relative space-y-7 flex justify-center flex-col lg:rounded-ss-[5rem] py-5">
-
-          <h2 className="ml-5 lg:ml-20">Information</h2>
-
-          {contacts.map((contact, index)=>(
-          <div className="flex flex-col ml-5 lg:ml-24" key={index}>
-            <div className="flex items-center text-xl">
-              <span className="mr-3">{contact.icon}</span>
-              <span className="">{contact.titre} :</span>
+          {/* Information de contact */}
+          <div className="w-full h-3/4 border-2 space-y-7 flex justify-center flex-col lg:p-5 p-3 rounded-lg group relative">
+            <h1 className="font-bold z-10 text-white"><span className="group-hover:text-black">Information</span></h1>
+            {contacts.map((contact, index)=>(
+            <div className="flex flex-col ml-5 z-10" key={index}>
+              <div className="flex items-center text-xl text-white">
+                <span className="mr-3 group-hover:text-black">{contact.icon}</span>
+                <span className="group-hover:text-black">{contact.titre} :</span>
+              </div>
+              <div className="text-lg text-white"><span className="group-hover:text-gray-700">{contact.nom} </span></div>
             </div>
-            <div className="text-lg text-gray-900">{contact.nom} </div>
-          </div>
-          ))}
-
-          {/* Google maps sur phone */}
-          <div className="absolute w-[100px] h-[100px] top-10 right-0 lg:hidden flex ">
-            <iframe
-              title="Stand'art Location"
-              width="100%"
-              height="100%"
-              className=" w-full h-full lg:h-full shadow-[inset_0px_0px_5px_rgba(0,0,0,0.7)]"
-              style={{ border: 0 }}
-              loading="lazy"
-              allowFullScreen
-              src="https://www.google.com/maps?q=-18.853962,47.566114&z=15&output=embed"
-            ></iframe>
+            ))}
+            <span className="w-full h-full bg-cyan-800 absolute bottom-0 left-0 group-hover:h-0 transition-all duration-500"></span>
           </div>
 
-          {/* Google maps */}
-          <div className="absolute w-[222px] h-[241px] z-20 bottom-0 right-0 hidden lg:flex ">
-            <iframe
-              title="Stand'art Location"
-              width="100%"
-              height="100%"
-              className=" w-full h-full lg:h-full shadow-[inset_0px_0px_5px_rgba(0,0,0,0.7)]"
-              style={{ border: 0 }}
-              loading="lazy"
-              allowFullScreen
-              src="https://www.google.com/maps?q=-18.853962,47.566114&z=15&output=embed"
-            ></iframe>
+          {/* Formulaire de contact */}
+          <div className="w-full h-[90%] lg:h-3/4 border-2 flex justify-center flex-col rounded-lg p-3 relative overflow-hidden group">
+          <h1 className="z-10 font-bold group-hover:text-white delay-300">Contactez-nous ici</h1>
+            <form className="flex flex-col space-y-5 z-10" onSubmit={onSubmit}>
+              <label htmlFor="Email" className="py-3 text-lg group-hover:text-white delay-300">Email:</label>
+              <input type="email" className=" p-3 border focus:outline-1 focus:outline focus:outline-cyan-800 group-hover:border-white group-hover:bg-cyan-800 group-hover:text-white"  name="email" require/>
+              <label htmlFor="Mess" className="text-lg group-hover:text-white delay-300">Message</label>
+              <input type="text" className=" p-3 border focus:outline-1 focus:outline focus:outline-cyan-800 group-hover:border-white group-hover:bg-cyan-800 group-hover:text-white" name="message" require/>
+              <input type="submit" className="p-3 bg-cyan-800 text-lg text-white  border-2 font-bold group-hover:border-2 delay-300" value='Envoyer' />
+            </form>
+            <p className="text-sms z-10 mt-2 group-hover:text-white">{result}</p>
+            <span className="w-full h-0 bg-cyan-800 absolute top-0 left-0 group-hover:h-full transition-all duration-500"></span>
           </div>
-        </div>
-        <div className="w-full h-[60%]"></div>
+
       </div>
 
-
-      <div className="w-full h-full flex flex-col justify-between">
-        <div className="w-full h-full hidden lg:flex"></div>
-
-        <div className="w-full h-full border-2 lg:-mt-56 lg:-ml-36 lg:rounded-ee-[5rem] relative flex justify-center flex-col">
-
-
-          <form className="flex flex-col lg:ml-24 lg:mr-24 mx-3 lg:mt-56 space-y-2 relative" onSubmit={onSubmit}>
-            <label htmlFor="Email" className="py-3 text-lg: font-bold">Email:</label>
-            <input type="email" className=" p-3 border focus:outline-1 focus:outline focus:outline-cyan-800"  name="email" require/>
-            <label htmlFor="Mess">Message</label>
-            <input type="text" className="p-3 border focus:outline-1 focus:outline focus:outline-cyan-800" name="message" require/>
-            <input type="submit" className="p-3 bg-cyan-800 text-lg text-white font-bold" value='Envoyer' />
-          </form>
-          <h2 className="absolute lg:top-20 top-12 right-1/4 lg:mr-24 lg:right-5">Contactez-nous ici</h2>
-          <p className="text-sm text-cyan-700 mt-2">{result}</p>
-
-
-        </div>
-
-
-      </div>
+    {/* Google maps */}
+     <Parallax
+      className="absolute w-[14%] h-[30%] z-20 bottom-0 rounded-full overflow-hidden left-2 hidden lg:flex "
+      speed={ -40}
+    >
+       <iframe
+         title="Stand'art Location"
+         width="100%"
+         height="100%"
+         className=" w-full h-full lg:h-full  shadow-[inset_0px_0px_5px_rgba(0,0,0,0.7)]"
+         style={{ border: 0 }}
+         loading="lazy"
+         allowFullScreen
+         src="https://www.google.com/maps?q=-18.853962,47.566114&z=15&output=embed"
+       ></iframe>
+     </Parallax>
 
     </div>
   )

@@ -3,7 +3,7 @@ export default function Accueil()
 {
   // Affichage
   return(
-    <div className="w-full h-full flex flex-col" id='Accueil'>
+    <div className="w-full h-full flex flex-col py-20 lg:py-0" id='Accueil'>
       {/* Page d'accueil */}
       <div className="w-full h-[120vh] lg:h-screen flex justify-center items-center my-10 lg:my-0">
         <div className="lg:w-[80%] w-[90%] lg:h-[80%] h-full flex border-b-4 border-cyan-900 p-3 justify-between items-center gap-10 flex-col-reverse lg:flex-row">

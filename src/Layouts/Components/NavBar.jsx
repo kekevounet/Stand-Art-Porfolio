@@ -14,7 +14,7 @@ export default function NavBar()
     {nom: 'Accueil', icon: <AiFillHome />, lien: 'Accueil' },
     {nom: 'Réalisation', icon: <TbChartAreaLineFilled />, lien: 'Réalisation'},
     {nom: 'Compétences', icon: <FaBrain />, lien: 'Compétences' },
-    {nom: 'Expérience', icon: <AiFillCheckCircle />, lien: 'Expérience'},
+    {nom: 'Pourquoi nous choisir', icon: <AiFillCheckCircle />, lien: 'Choix'},
     {nom: 'Contact', icon: <MdContacts />, lien: 'Contact'},
   ];
   const [ navOuvert, setNavOuvert ] = useState(true);
