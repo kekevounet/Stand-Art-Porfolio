@@ -5,7 +5,7 @@ export default function Footer()
       {nom: 'Accueil', lien: 'Accueil' },
       {nom: 'Réalisation', lien: 'Réalisation'},
       {nom: 'Compétences', lien: 'Compétences' },
-      {nom: 'Expérience', lien: 'Expérience'},
+      {nom: 'Pourquoi nous choisir ?', lien: 'Choix'},
       {nom: 'Contact', lien: 'Contact'},
     ];
   // Affichage

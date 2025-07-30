@@ -16,7 +16,7 @@ export default function Accueil()
             <div className="text-center text-lg mt-5 font-bold">Notre objectif est de proposer des prestations fiables, créatives et professionnelles, tout en maintenant la proximité et la qualité qui ont fait notre réputaion. </div>
           </div>
           <div className="w-[100%] h-[100%] flex justify-center items-center overflow-hidden relative rounded-full bg-white">
-            <img src={Logo} alt="Logo de stand'Art" className="absolute rounded-full border-4 border-cyan-800" />
+            <img src={Logo} alt="Logo de stand'Art" className="absolute lg:h-auto rounded-full border-4 border-cyan-800" />
           </div>
         </div>
       </div>
