@@ -55,7 +55,7 @@ export default function Choix() {
   const images = [
     {img: photo1, texte: "Tapis souris",icon: <BsFillMouse2Fill /> },
     {img: photo2, texte: "Casque",icon: <BiHeadphone /> },
-    {img: photo3, texte: "Power banque",icon: <BsFillLightningChargeFill />},
+    {img: photo3, texte: "Disque dur",icon: <BsFillLightningChargeFill />},
     {img: photo4, texte: "Ordinateur portable",icon: <AiOutlineLaptop /> },
     {img: photo18, texte: "tablier", icon: <RiShirtLine />},
     {img: photo15, texte: "Combinaison", icon: <GiClothes /> },
@@ -67,13 +67,13 @@ export default function Choix() {
     {img: photo10, texte: "Clavier",icon: <BsKeyboardFill />},
     {img: photo11, texte: "Toner",icon: <TiPrinter /> },
     {img: photo12, texte: "Gourde",icon: <TbBottle /> },
-    {img: photo14, texte: "T-shirt personnalisé", icon: <IoIosShirt /> },
+    {img: photo14, texte: "Polo personnalisé", icon: <IoIosShirt /> },
     {img: photo16, texte: "Combinaison", icon: <GiClothes />},
     {img: photo17, texte: "tablier", icon: <RiShirtLine />},
     {img: photo19, texte: "T-shirt personnalisé", icon: <IoIosShirt />},
     {img: photo20, texte: "Gilet", icon: <GiGlowingArtifact />},
     {img: photo21, texte: "USB personnalisé", icon:<BsFillUsbDriveFill />},
-    {img: photo13, texte: "T-shirt", icon: <FaTshirt /> },
+    {img: photo13, texte: "Polo", icon: <FaTshirt /> },
     {img: photo22, texte: "Stylo", icon: <BsFillPenFill />},
   ]
   const fullImages = [...images, ...images]; // Duplication pour continuité
@@ -108,18 +108,17 @@ export default function Choix() {
 
         </div>
       </div>
-          <div className="w-full container mx-auto px-4 py-8 flex flex-col items-center text-center space-y-4 bg-white">
+
+ <div className="w-full container mx-auto px-4 py-8 flex flex-col items-center text-center space-y-4 bg-white">
   <h2 className="text-3xl md:text-4xl font-semibold text-gray-800">
-    Nos partenaires de confiance
+    Ils nous font confiance. Et vous ?
   </h2>
-  <p className="text-lg md:text-xl text-gray-600 max-w-3xl">
-    Nous collaborons avec des entreprises et organisations reconnues pour leur professionnalisme, leur engagement et leur expertise. Ces partenariats stratégiques renforcent notre capacité à vous offrir des services fiables, innovants et adaptés à vos besoins.
+  <p className="text-lg md:text-xl text-gray-600 max-w-2xl">
+    La confiance ne se demande pas, elle se mérite. Jour après jour, nous bâtissons la nôtre avec rigueur, transparence et engagement.
   </p>
-  <p className="text-md md:text-lg text-gray-500 max-w-2xl">
-    Chaque partenaire a été soigneusement sélectionné pour ses valeurs, sa vision partagée et son excellence opérationnelle. Ensemble, nous construisons un écosystème solide, orienté vers la réussite commune.
-  </p>
-  <div className="w-20 h-[2px] bg-gray-300 mt-2 rounded-full"></div>
+  <div className="w-16 h-[2px] bg-gray-300 mt-2 rounded-full"></div>
 </div>
+
 
       <div className="w-full h-[100vh] lg:h-[50vh] flex justify-around items-center flex-col lg:flex-row container">
         <img src={part} alt="parti" classname="w-full h-full border-2" />
